@@ -29,14 +29,14 @@ $pmac = strpos($mycom, $findme);
 $mac=substr($mycom,($pmac+36),17);
 $ret=mysqli_query($con,"insert into usercheck(logindate,logintime,user_id,username,email,ip,mac,city,country)values('".$val3."','".$tim."','".$_SESSION['id']."','".$_SESSION['name']."','".$_SESSION['login']."','$ip_address','$mac','$city','$country')");
 
-$extra="dashboard.php";
+$extra="/dashboard.php";
 echo "<script>window.location.href='".$extra."'</script>";
 exit();
 }
 else
 {
 $_SESSION['action1']="Invalid username or password";
-$extra="index.php";
+$extra="/";
 
 echo "<script>window.location.href='".$extra."'</script>";
 exit();
@@ -68,7 +68,7 @@ exit();
         <div class="col-md-5 col-md-offset-1">
           <h2>Sign in to RacVert CRM</h2>
           <p>
-            <a href="registration.php">Sign up Now!</a> for a RacVert CRM account</p>
+            <a href="/registration.php">Sign up Now!</a> for a RacVert CRM account</p>
           <br>
 
         </div>
