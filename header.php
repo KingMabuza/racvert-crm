@@ -25,14 +25,9 @@
             <div class="iconset top-settings-dark "></div>
             </a>
             <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
-                <?php $ret=mysqli_query($con,"select * from user");
-                $cnt=1;
-                while($row=mysqli_fetch_array($ret))
-                {
-                $_SESSION['ids']=$row['id'];
-                ?>
-              <li><a href="profile.php?id=<?php echo $row['id'];?>"> My Account</a></li>
-               <?php $cnt=$cnt+1; } ?>
+
+              <li><a href="profile.php?id=<?php echo $_SESSION['id'];?>"> My Account</a></li>
+
               <li class="divider"></li>
               <li><a href="logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
             </ul>
