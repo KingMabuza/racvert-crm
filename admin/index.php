@@ -8,7 +8,7 @@ $ret=mysqli_query($con,"SELECT * FROM admin WHERE name='".$_POST['email']."' and
 $num=mysqli_fetch_array($ret);
 if($num>0)
 {
-$extra="/home.php";
+$extra="home.php";
 $_SESSION['alogin']=$_POST['email'];
 $_SESSION['id']=$num['id'];
 echo "<script>window.location.href='".$extra."'</script>";
@@ -17,7 +17,7 @@ exit();
 else
 {
 $_SESSION['action1']="*Invalid username or password";
-$extra="/";
+$extra="index.php";
 
 echo "<script>window.location.href='".$extra."'</script>";
 exit();
