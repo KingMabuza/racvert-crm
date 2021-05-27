@@ -88,14 +88,9 @@ include("dbconnection.php");
                 <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
              
                 <div class="heading">  <span class="fa fa-user"></span>
-                    <?php $ret=mysqli_query($con,"select * from user");
-                    $cnt=1;
-                    while($row=mysqli_fetch_array($ret))
-                    {
-                    $_SESSION['ids']=$row['id'];
-                    ?>
-                 <a href="profile.php?id=<?php echo $row['id'];?>" style="color:#FFF">My Profile</a>
-                   <?php $cnt=$cnt+1; } ?>
+
+                 <a href="profile.php?id=<?php echo $_SESSION['id'];?>" style="color:#FFF">My Profile</a>
+
                  </div>
                 <div class="progress transparent progress-white progress-small no-radius">
                   <div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="45%" ></div>
