@@ -22,7 +22,7 @@
     
           <li class="active"><a href="change-password.php"><span class="fa fa-file-text-o"></span> Change Password</a></li>
 
-                            <li><a href="profile.php?id=<?php echo $_GET['id']?>" class=""><span class="fa fa-user"></span> Profile</a></li>
+                            <li><a href="profile.php?id=<?php echo $_SESSION['id'];?>" class=""><span class="fa fa-user"></span> Profile</a></li>
 
                               <li ><a href="get-quote.php"> <span class="fa fa-tasks"></span> Request a Quote</a></li>
 							     <li class="active"><a href="create-ticket.php"><span class="fa fa-ticket"></span> Create Ticket</a></li>
