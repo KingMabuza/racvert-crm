@@ -21,14 +21,9 @@
 		    </li>
     
           <li class="active"><a href="change-password.php"><span class="fa fa-file-text-o"></span> Change Password</a></li>
-                            <?php $ret=mysqli_query($con,"select * from user");
-                            $cnt=1;
-                            while($row=mysqli_fetch_array($ret))
-                            {
-                            $_SESSION['ids']=$row['id'];
-                            ?>
-                            <li><a href="profile.php?id=<?php echo $row['id'];?>" class=""><span class="fa fa-user"></span> Profile</a></li>
-                            <?php $cnt=$cnt+1; } ?>
+
+                            <li><a href="profile.php?id=<?php $_GET['id']?>" class=""><span class="fa fa-user"></span> Profile</a></li>
+
                               <li ><a href="get-quote.php"> <span class="fa fa-tasks"></span> Request a Quote</a></li>
 							     <li class="active"><a href="create-ticket.php"><span class="fa fa-ticket"></span> Create Ticket</a></li>
                                 <li ><a href="view-tickets.php"><span class="fa fa-ticket"></span> View Ticket</a></li>
